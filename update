@@ -1,0 +1,9 @@
+#!/usr/bin/env nix-shell
+#!nix-shell -i bash
+
+# When niv supports nixpkgs fetchgit, switch
+
+nix-prefetch-git \
+  --fetch-submodules \
+  https://github.com/haskell/haskell-language-server.git \
+  > nix/haskell-language-server.json
