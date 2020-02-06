@@ -1,7 +1,7 @@
 {
   "url": "https://github.com/haskell/haskell-language-server.git",
-  "rev": "438ff8b59502d752be610a171605fddb3083f7a3",
-  "date": "2020-02-04T22:52:15+00:00",
-  "sha256": "1fba7g1h8ach8a3q6qscvb07n37m2k3sbfd8091c31r3q27rlk7i",
+  "rev": "d1a232f8f96571e2afd36aee068a4d9b06857d94",
+  "date": "2020-02-05T17:25:47+00:00",
+  "sha256": "1hjnry9dhhrib64x97jmkfl7fch9n8s7xxzgy5aaj4h78l3dck06",
   "fetchSubmodules": true
 }
