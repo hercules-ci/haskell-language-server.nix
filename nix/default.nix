@@ -4,7 +4,7 @@
 }:
 let
   overlay = self: super: {
-    project-nix = import sources."project.nix" {};
+    project-nix = import sources."project.nix" { inherit (self) lib; };
     project-eval =
       self.project-nix.evalProject {
         modules = [
