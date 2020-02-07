@@ -34,6 +34,9 @@ in
       defaults
       {
         stackYaml = haskell-language-server-source + "/stack-8.6.5.yaml";
+        # Fixups
+        # https://hercules-ci.com/accounts/github/hercules-ci/derivations/%2Fnix%2Fstore%2Fn7ik6fbxl50824qylsk0kh35q3f7k3sz-cabal-helper-1.0.0.0-lib-c-h-internal.drv/log?via-job=167a65a4-f7d0-412c-9b70-f030456ed1dd
+        configuration.packages.cabal-helper.components.library.doHaddock = false;
       }
     ];
   packageSets.haskell-nix."ghc-8_8_2" =
@@ -42,7 +45,7 @@ in
       {
         stackYaml = haskell-language-server-source + "/stack-8.8.2.yaml";
         # Fixups
-        nonReinstallablePkgs = [ "Cabal" ];
+        configuration.nonReinstallablePkgs = [ "Cabal" ];
       }
     ];
   pre-commit.enable = true;
