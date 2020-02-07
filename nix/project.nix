@@ -41,6 +41,8 @@ in
       defaults
       {
         stackYaml = haskell-language-server-source + "/stack-8.8.2.yaml";
+        # Fixups
+        nonReinstallablePkgs = [ "Cabal" ];
       }
     ];
 
