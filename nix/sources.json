@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "input-output-hk",
         "repo": "hackage.nix",
-        "rev": "314346bcb3706c6a82df901a70417c07a7ce68f5",
-        "sha256": "1a04j897ajybcw4gak1khhbv8kmim7g7p9ivq5y68kn5bnhdcyqw",
+        "rev": "08b747155088c4913e572a6f400e1f34c4e97832",
+        "sha256": "1pd6s7lh84xwj4ni7g95zhlwkahyki4zl2qmidcn1yb2a449x73c",
         "type": "tarball",
-        "url": "https://github.com/input-output-hk/hackage.nix/archive/314346bcb3706c6a82df901a70417c07a7ce68f5.tar.gz",
+        "url": "https://github.com/input-output-hk/hackage.nix/archive/08b747155088c4913e572a6f400e1f34c4e97832.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "haskell.nix": {
@@ -17,10 +17,10 @@
         "homepage": "https://input-output-hk.github.io/haskell.nix",
         "owner": "input-output-hk",
         "repo": "haskell.nix",
-        "rev": "659d80f56349982ad0803c5b6552c99a062ebd8d",
-        "sha256": "1z6w3g0ra37p5grd8brk4q717d6iwm5pwshl9z9pzhgckyzjyd9s",
+        "rev": "5145fc9c1854cc78ea79af0d0280eec247a88ea7",
+        "sha256": "02xba12yl75mvwf1agfvi2pszr6lywy6lzgwm1s92grcgccycfpd",
         "type": "tarball",
-        "url": "https://github.com/input-output-hk/haskell.nix/archive/659d80f56349982ad0803c5b6552c99a062ebd8d.tar.gz",
+        "url": "https://github.com/input-output-hk/haskell.nix/archive/5145fc9c1854cc78ea79af0d0280eec247a88ea7.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
@@ -77,10 +77,10 @@
         "homepage": "",
         "owner": "input-output-hk",
         "repo": "stackage.nix",
-        "rev": "d6e136eae8e303e38fa767d6bbf04e286a464e75",
-        "sha256": "1vdrjrix6cm9srm62rcmrpil2lpmhalpg1n57jihciafdkcdv8ni",
+        "rev": "072504b5f5a66c6a6380e413d6225811a4749c3d",
+        "sha256": "08xkbywkd6dwmkq3yhh05mipvbzk4w5zg5h4asn03niiplkwvyfk",
         "type": "tarball",
-        "url": "https://github.com/input-output-hk/stackage.nix/archive/d6e136eae8e303e38fa767d6bbf04e286a464e75.tar.gz",
+        "url": "https://github.com/input-output-hk/stackage.nix/archive/072504b5f5a66c6a6380e413d6225811a4749c3d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
