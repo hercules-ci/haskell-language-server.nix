@@ -1,24 +1,12 @@
-{ sources ? import ./sources.nix
-, nixpkgs ? sources.nixpkgs
-, system ? builtins.currentSystem
+args@{ sources ? import ./sources.nix
+, extraModules ? []
+, ...
 }:
-let
-  overlay = self: super: {
-    project-nix = import sources."project.nix" { inherit (self) lib; };
-    project-eval =
-      self.project-nix.evalProject {
-        modules = [
-          { nixpkgs.pkgs = self; }
-          ./project.nix
-        ];
-      };
-    project = self.project-eval.config;
-  };
-in
-import nixpkgs {
-  config = {};
-  overlays = [
-    overlay
-  ];
-  inherit system;
-}
+(
+  (import sources."project.nix").evalNivProject (
+    {
+      modules = [ ./project.nix ] ++ extraModules;
+      inherit sources;
+    }
+  )
+).config

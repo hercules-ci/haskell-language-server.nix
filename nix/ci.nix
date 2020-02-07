@@ -10,9 +10,13 @@ dimension "System" {
   "x86_64-darwin" = {};
 } (
   system: {}:
-
-    import ../default.nix {
-      pkgs = import ./default.nix { inherit system; };
-    }
-
+    (
+      import ./default.nix {
+        extraModules = [
+          {
+            nixpkgs.system = system;
+          }
+        ];
+      }
+    ).checks
 )
