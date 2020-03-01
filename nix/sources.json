@@ -60,15 +60,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "project.nix": {
-        "branch": "add-haskell.nix",
+        "branch": "master",
         "description": "A configuration manager for your projects",
         "homepage": null,
         "owner": "hercules-ci",
         "repo": "project.nix",
-        "rev": "2af057272dcdc74982898823a1c2ea398f79827d",
-        "sha256": "162is3s9zrvv0jn0pqygv209qbk7x3v04z1b5wbygk1jy9xdbg7y",
+        "rev": "95f26b1cca0414f080172721ab7996ab65b8d968",
+        "sha256": "1fbpvidq3bdvinxdkk2vvvfjhxmbf45hgy2sgv2pbml4zrckbfdj",
         "type": "tarball",
-        "url": "https://github.com/hercules-ci/project.nix/archive/2af057272dcdc74982898823a1c2ea398f79827d.tar.gz",
+        "url": "https://github.com/hercules-ci/project.nix/archive/95f26b1cca0414f080172721ab7996ab65b8d968.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "stackage.nix": {
