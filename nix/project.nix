@@ -1,4 +1,4 @@
-{ lib, config, sets, sources, ... }:
+{ lib, config, sets, defaultSources, sources, ... }:
 let
   pkgs = config.nixpkgs.pkgs;
   haskell-language-server-source = pkgs.fetchgit {
@@ -16,7 +16,7 @@ let
 in
 {
   imports = [
-    (sources."pre-commit-hooks.nix" + "/nix/project-module.nix")
+    (defaultSources."pre-commit-hooks.nix" + "/nix/project-module.nix")
   ];
   root = ../.;
   pinning.niv.enable = true;
