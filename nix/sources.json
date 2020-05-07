@@ -65,10 +65,10 @@
         "homepage": null,
         "owner": "hercules-ci",
         "repo": "project.nix",
-        "rev": "3218b8e94246e2efd18f9e600cdba17eec36dd61",
-        "sha256": "00x3rcwbi3xswcniwsn6aiaqfmz32y7pm6gs2p216flhkb15m227",
+        "rev": "db0eba4f3159c1eeae8b96362c2f338e3420ede5",
+        "sha256": "1hdqmxwnsyvnn6idm3r9gckbmxajz11dclpjvpmb466s8w3bspm2",
         "type": "tarball",
-        "url": "https://github.com/hercules-ci/project.nix/archive/3218b8e94246e2efd18f9e600cdba17eec36dd61.tar.gz",
+        "url": "https://github.com/hercules-ci/project.nix/archive/db0eba4f3159c1eeae8b96362c2f338e3420ede5.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "stackage.nix": {
