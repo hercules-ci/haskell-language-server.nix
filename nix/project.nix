@@ -5,6 +5,7 @@ let
     inherit (builtins.fromJSON (builtins.readFile ./haskell-language-server.json))
       url sha256 fetchSubmodules
       ;
+    deepClone = true; # Not too expensive for this repo; avoids some nasty errors.
   };
   defaults = {
     configuration.packages.ghc.flags.ghci = lib.mkForce true;
