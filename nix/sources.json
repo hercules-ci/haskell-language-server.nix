@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "input-output-hk",
         "repo": "hackage.nix",
-        "rev": "becd747fdbc1a5df1abfbfb461b727b7da82f47e",
-        "sha256": "03kb8ml0lhrfz7d20wichaasdaav9c5lvncpl7k73fc7gpvm8x66",
+        "rev": "9416457638da51a476f26cb8ae478782e1ac096c",
+        "sha256": "1vaxrkbnhl2da1zw538h3hjljpw03acxv9l4f4gg5vv1a8jmdci8",
         "type": "tarball",
-        "url": "https://github.com/input-output-hk/hackage.nix/archive/becd747fdbc1a5df1abfbfb461b727b7da82f47e.tar.gz",
+        "url": "https://github.com/input-output-hk/hackage.nix/archive/9416457638da51a476f26cb8ae478782e1ac096c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "haskell.nix": {
