@@ -1,26 +1,14 @@
 {
-    "hackage.nix": {
-        "branch": "master",
-        "description": "Automatically generated Nix expressions for Hackage",
-        "homepage": "",
-        "owner": "input-output-hk",
-        "repo": "hackage.nix",
-        "rev": "9416457638da51a476f26cb8ae478782e1ac096c",
-        "sha256": "1vaxrkbnhl2da1zw538h3hjljpw03acxv9l4f4gg5vv1a8jmdci8",
-        "type": "tarball",
-        "url": "https://github.com/input-output-hk/hackage.nix/archive/9416457638da51a476f26cb8ae478782e1ac096c.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "haskell.nix": {
         "branch": "master",
         "description": "Alternative Haskell Infrastructure for Nixpkgs",
         "homepage": "https://input-output-hk.github.io/haskell.nix",
         "owner": "input-output-hk",
         "repo": "haskell.nix",
-        "rev": "c9f056ed49f24d23040e17d53782d6c75b08553f",
-        "sha256": "1dxrx9i6xkl32r8vbnhgz46dra6nndy5mlar3dd90mphs8l0px6h",
+        "rev": "83c85a0f2200fa63ed6122d66317069e5c7da1da",
+        "sha256": "14r17js48fzamm6mq9kc6a78k72lkdg8c2l4ja4ihqlib2xi4917",
         "type": "tarball",
-        "url": "https://github.com/input-output-hk/haskell.nix/archive/c9f056ed49f24d23040e17d53782d6c75b08553f.tar.gz",
+        "url": "https://github.com/input-output-hk/haskell.nix/archive/83c85a0f2200fa63ed6122d66317069e5c7da1da.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
@@ -69,18 +57,6 @@
         "sha256": "1hdqmxwnsyvnn6idm3r9gckbmxajz11dclpjvpmb466s8w3bspm2",
         "type": "tarball",
         "url": "https://github.com/hercules-ci/project.nix/archive/db0eba4f3159c1eeae8b96362c2f338e3420ede5.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "stackage.nix": {
-        "branch": "master",
-        "description": "Automatically generated Nix expressions of Stackage snapshots",
-        "homepage": "",
-        "owner": "input-output-hk",
-        "repo": "stackage.nix",
-        "rev": "4024881c4ff974fc3b3bead1d1a733a6b1910cf1",
-        "sha256": "0x0da9glfwihdd8hzf6rzv7670sgmfdj2g7cys5p7rrmnf5whfcq",
-        "type": "tarball",
-        "url": "https://github.com/input-output-hk/stackage.nix/archive/4024881c4ff974fc3b3bead1d1a733a6b1910cf1.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
