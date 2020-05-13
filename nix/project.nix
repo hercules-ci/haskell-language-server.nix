@@ -2,7 +2,7 @@
 let
   pkgs = config.nixpkgs.pkgs;
   haskell-language-server-source = pkgs.fetchgit
-    (builtins.removeAttrs (builtins.fromJSON (builtins.readFile ./haskell-language-server.json)) ["date"]);
+    (builtins.removeAttrs (builtins.fromJSON (builtins.readFile ./haskell-language-server.json)) [ "date" ]);
   defaults = {
     configuration.packages.ghc.flags.ghci = lib.mkForce true;
     configuration.packages.ghci.flags.ghci = lib.mkForce true;
@@ -11,11 +11,13 @@ let
     configuration.packages.ghcide.configureFlags = [ "--enable-executable-dynamic" ];
 
     # fixme: how to override a haskell.nix option?
-    configuration.packages.shake.src = lib.mkForce (builtins.fetchGit {
-      url = "https://github.com/wz1000/shake.git";
-      rev = "fb3859dca2e54d1bbb2c873e68ed225fa179fbef";
-      ref = "no-scheduler";
-    });
+    configuration.packages.shake.src = lib.mkForce (
+      builtins.fetchGit {
+        url = "https://github.com/wz1000/shake.git";
+        rev = "fb3859dca2e54d1bbb2c873e68ed225fa179fbef";
+        ref = "no-scheduler";
+      }
+    );
   };
 in
 {
