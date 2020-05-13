@@ -1,18 +1,21 @@
 { lib, config, sets, defaultSources, sources, ... }:
 let
   pkgs = config.nixpkgs.pkgs;
-  haskell-language-server-source = pkgs.fetchgit {
-    inherit (builtins.fromJSON (builtins.readFile ./haskell-language-server.json))
-      url sha256 fetchSubmodules
-      ;
-    deepClone = true; # Not too expensive for this repo; avoids some nasty errors.
-  };
+  haskell-language-server-source = pkgs.fetchgit
+    (builtins.removeAttrs (builtins.fromJSON (builtins.readFile ./haskell-language-server.json)) ["date"]);
   defaults = {
     configuration.packages.ghc.flags.ghci = lib.mkForce true;
     configuration.packages.ghci.flags.ghci = lib.mkForce true;
     configuration.reinstallableLibGhc = true;
     # This fixes a performance issue, probably https://gitlab.haskell.org/ghc/ghc/issues/15524
     configuration.packages.ghcide.configureFlags = [ "--enable-executable-dynamic" ];
+
+    # fixme: how to override a haskell.nix option?
+    configuration.packages.shake.src = lib.mkForce (builtins.fetchGit {
+      url = "https://github.com/wz1000/shake.git";
+      rev = "fb3859dca2e54d1bbb2c873e68ed225fa179fbef";
+      ref = "no-scheduler";
+    });
   };
 in
 {
@@ -54,6 +57,15 @@ in
       defaults
       {
         stackYaml = haskell-language-server-source + "/stack-8.8.2.yaml";
+        # Fixups
+        configuration.nonReinstallablePkgs = [ "Cabal" ];
+      }
+    ];
+  packageSets.haskell-nix."ghc-8_8_3" =
+    lib.mkMerge [
+      defaults
+      {
+        stackYaml = haskell-language-server-source + "/stack-8.8.3.yaml";
         # Fixups
         configuration.nonReinstallablePkgs = [ "Cabal" ];
       }
