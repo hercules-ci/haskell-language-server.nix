@@ -9,6 +9,13 @@ let
     configuration.reinstallableLibGhc = true;
     # This fixes a performance issue, probably https://gitlab.haskell.org/ghc/ghc/issues/15524
     configuration.packages.ghcide.configureFlags = [ "--enable-executable-dynamic" ];
+
+    # fixme: how to override a haskell.nix option?
+    configuration.packages.shake.src = lib.mkForce (builtins.fetchGit {
+      url = "https://github.com/wz1000/shake.git";
+      rev = "fb3859dca2e54d1bbb2c873e68ed225fa179fbef";
+      ref = "no-scheduler";
+    });
   };
 in
 {
