@@ -1,9 +1,15 @@
 #!/usr/bin/env nix-shell
 #!nix-shell -i bash
 
-# When niv supports nixpkgs fetchgit, switch
+niv update
 
+# When niv supports nixpkgs fetchgit, switch
+# https://github.com/nmattia/niv/issues/58
+
+# Deep cloning is not too expensive for this repo and avoids some nasty errors.
 nix-prefetch-git \
   --fetch-submodules \
+  --deepClone \
+  --leave-dotGit \
   https://github.com/haskell/haskell-language-server.git \
   > nix/haskell-language-server.json
