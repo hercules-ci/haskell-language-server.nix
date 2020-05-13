@@ -27,15 +27,6 @@ in
   root = ../.;
   pinning.niv.enable = true;
   shell.packages = [ pkgs.nix-prefetch-git ];
-  checks."AAAAAworkaround-nix-2431" = {
-    shake = (
-      builtins.fetchGit {
-        url = "https://github.com/wz1000/shake.git";
-        rev = "fb3859dca2e54d1bbb2c873e68ed225fa179fbef";
-        ref = "no-scheduler";
-      }
-    ).outPath;
-  };
 
   packageSets.haskell-nix."ghc-8_6_4" =
     lib.mkMerge [
