@@ -1,26 +1,14 @@
 {
-    "hackage.nix": {
-        "branch": "master",
-        "description": "Automatically generated Nix expressions for Hackage",
-        "homepage": "",
-        "owner": "input-output-hk",
-        "repo": "hackage.nix",
-        "rev": "becd747fdbc1a5df1abfbfb461b727b7da82f47e",
-        "sha256": "03kb8ml0lhrfz7d20wichaasdaav9c5lvncpl7k73fc7gpvm8x66",
-        "type": "tarball",
-        "url": "https://github.com/input-output-hk/hackage.nix/archive/becd747fdbc1a5df1abfbfb461b727b7da82f47e.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "haskell.nix": {
         "branch": "master",
         "description": "Alternative Haskell Infrastructure for Nixpkgs",
         "homepage": "https://input-output-hk.github.io/haskell.nix",
         "owner": "input-output-hk",
         "repo": "haskell.nix",
-        "rev": "794f796350de6711234db805af8a1b80d3509b8c",
-        "sha256": "03ilxganwz7h18x0ghxach75wjzbdy9nh3i2lp15z0nvw8y27lyg",
+        "rev": "83c85a0f2200fa63ed6122d66317069e5c7da1da",
+        "sha256": "14r17js48fzamm6mq9kc6a78k72lkdg8c2l4ja4ihqlib2xi4917",
         "type": "tarball",
-        "url": "https://github.com/input-output-hk/haskell.nix/archive/794f796350de6711234db805af8a1b80d3509b8c.tar.gz",
+        "url": "https://github.com/input-output-hk/haskell.nix/archive/83c85a0f2200fa63ed6122d66317069e5c7da1da.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
@@ -51,12 +39,12 @@
         "branch": "master",
         "description": "Seamless integration of https://pre-commit.com git hooks with Nix.",
         "homepage": "",
-        "owner": "hercules-ci",
+        "owner": "cachix",
         "repo": "pre-commit-hooks.nix",
-        "rev": "77dd75709bbf33e2fc769dae08bab04a61ae409c",
-        "sha256": "0p60mc6a5fv7kplqciq1m0ql8azhx5xbxvc0n67jdw4j33n9a496",
+        "rev": "f709c4652d4696dbe7c6a8354ebd5938f2bf807b",
+        "sha256": "0700c5awc2gjzgikhx69vjbpyshx6b5xljmpxrdzpgqyg3blxbkl",
         "type": "tarball",
-        "url": "https://github.com/hercules-ci/pre-commit-hooks.nix/archive/77dd75709bbf33e2fc769dae08bab04a61ae409c.tar.gz",
+        "url": "https://github.com/cachix/pre-commit-hooks.nix/archive/f709c4652d4696dbe7c6a8354ebd5938f2bf807b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "project.nix": {
@@ -69,18 +57,6 @@
         "sha256": "1hdqmxwnsyvnn6idm3r9gckbmxajz11dclpjvpmb466s8w3bspm2",
         "type": "tarball",
         "url": "https://github.com/hercules-ci/project.nix/archive/db0eba4f3159c1eeae8b96362c2f338e3420ede5.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "stackage.nix": {
-        "branch": "master",
-        "description": "Automatically generated Nix expressions of Stackage snapshots",
-        "homepage": "",
-        "owner": "input-output-hk",
-        "repo": "stackage.nix",
-        "rev": "4024881c4ff974fc3b3bead1d1a733a6b1910cf1",
-        "sha256": "0x0da9glfwihdd8hzf6rzv7670sgmfdj2g7cys5p7rrmnf5whfcq",
-        "type": "tarball",
-        "url": "https://github.com/input-output-hk/stackage.nix/archive/4024881c4ff974fc3b3bead1d1a733a6b1910cf1.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
