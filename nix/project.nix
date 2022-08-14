@@ -3,24 +3,32 @@ let
   pkgs = config.nixpkgs.pkgs;
   haskell-language-server-source = pkgs.fetchgit
     (builtins.removeAttrs (builtins.fromJSON (builtins.readFile ./haskell-language-server.json)) [ "date" ]);
+
+  # Work around https://github.com/NixOS/nix/issues/2431
+  nixFetchGitWorkaround = {
+    shake = builtins.fetchGit {
+      url = "https://github.com/wz1000/shake.git";
+      rev = "fb3859dca2e54d1bbb2c873e68ed225fa179fbef";
+      ref = "no-scheduler";
+    };
+  };
+  # Use this anywhere before haskell.nix processes the stack.yaml
+  forceNixFetchGitWorkaround = x:
+    builtins.trace "pre-fetching git sources to work around Nix #2431"
+      (
+        lib.deepSeq nixFetchGitWorkaround
+          (builtins.trace "sources pre-fetched" x)
+      );
+
   defaults = {
     configuration.packages.ghc.flags.ghci = lib.mkForce true;
     configuration.packages.ghci.flags.ghci = lib.mkForce true;
     configuration.reinstallableLibGhc = true;
     # This fixes a performance issue, probably https://gitlab.haskell.org/ghc/ghc/issues/15524
     configuration.packages.ghcide.configureFlags = [ "--enable-executable-dynamic" ];
-
-    # fixme: how to override a haskell.nix option?
-    configuration.packages.shake.src = lib.mkForce (
-      builtins.fetchGit {
-        url = "https://github.com/wz1000/shake.git";
-        rev = "fb3859dca2e54d1bbb2c873e68ed225fa179fbef";
-        ref = "no-scheduler";
-      }
-    );
   };
 in
-{
+forceNixFetchGitWorkaround {
   imports = [
     (defaultSources."pre-commit-hooks.nix" + "/nix/project-module.nix")
   ];
